@@ -1,0 +1,8 @@
+inicioprog
+123
+teste = 123
+{comment}
+teste = 456
+123 + 456
+teste = 789
+fimprog
