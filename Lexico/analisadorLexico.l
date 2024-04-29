@@ -364,8 +364,9 @@ fimenquanto {
 	exit(0);
 }
 
-[[:^space:]]+ {
-    printf("ERRO\n");
+. {
+    printf("ERRO: EXPRESSÃO INVÁLIDA\n");
+	exit(0);
 }
 
 %%

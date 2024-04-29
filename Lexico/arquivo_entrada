@@ -1,11 +1,10 @@
 inicioprog
-id = 123 ;
-lit = "lit" ;
+id = 123;
+lit = "lit";
 {comment}
-id2 = ( id * id1 ) + 10 ;
-bool = id1 >= id2 ;
-pontoFlut = 13.44e-4 ;
-!@#$%#
+id2 = (id*id1) + 10;
+bool = id1 >= id2;
+pontoFlut = 13.44e-4;
 inicioargs
 fimargs
 iniciovars
