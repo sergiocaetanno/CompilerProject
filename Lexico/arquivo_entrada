@@ -1,8 +1,22 @@
 inicioprog
-123
-teste = 123
+id = 123 ;
+lit = "lit" ;
 {comment}
-teste = 456
-123 + 456
-teste = 789
+id2 = ( id * id1 ) + 10 ;
+bool = id1 >= id2 ;
+pontoFlut = 13.44e-4 ;
+!@#$%#
+inicioargs
+fimargs
+iniciovars
+escreva
+inteiro
+real
+literal
+se
+entao
+fimse
+enquanto
+faca
+fimenquanto
 fimprog
