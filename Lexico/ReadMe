@@ -5,6 +5,12 @@ tabela_simbolos.csv é um arquivo utilizado para a visualização da tabela de s
 
 Utilizar os comandos a seguir para teste:
 
-flex analisadorLexico.l               #GERA O ARQUIVO: lex.yy.c
-gcc -o analisadorLexico lex.yy.c -ll  #COMPILA-O COM O NOME: analisadorLexico (testar com e sem a partícula -ll)
-./arquivo                             #EXECUTA O ANALISADOR LEXICO PARA O ARQUIVO DE ENTRADA FORNECIDO
+flex analisadorLexico.l                        #GERA O ARQUIVO: lex.yy.c
+gcc -o analisadorLexicoCompilado lex.yy.c -ll  #COMPILA-O COM O NOME: analisadorLexicoCompilado (testar com e sem a partícula -ll)
+./analisadorLexicoCompilado                    #EXECUTA O ANALISADOR LEXICO PARA O ARQUIVO DE ENTRADA FORNECIDO
+
+
+OBS: 
+
+- Os arquivos lex.yy.c e analisadorLexicoCompilado podem ser excluídos, dito que podem ser recriados com os comandos acima
+- Caso esses arquivos já existam, é possível utilizá-los para testes

@@ -117,7 +117,6 @@
 		fclose(arquivo);
 	}
 
-
 %}
 
 D [0-9]
@@ -129,7 +128,6 @@ SPACE [[:space:]]
 TAB [\t]
 
 %%
-
 
 inicioprog  {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -259,7 +257,6 @@ fimenquanto {
     printf("FIMENQUANTO\n");
 }
 
-
 {D}+(\.{D}+)?((E|e)(\+|-)?{D}+)?  {
     // Armazenar o número na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -351,7 +348,6 @@ fimenquanto {
     //printf("VAZIO\n");
 }
 
-
 \{({L}|{D}|{S}|{SPACE}|{TAB})*\}  {
     // Armazenar o ponto e vírgula na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -359,7 +355,6 @@ fimenquanto {
     num_simbolos++;
     printf("COMENTARIO\n");
 }
-
 
 <<EOF>> {
     printf("FIM_DE_ARQ\n");
