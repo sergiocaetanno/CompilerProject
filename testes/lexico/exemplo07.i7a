@@ -1,0 +1,17 @@
+inicioprog
+
+inicioargs
+	literal lit;
+fimargs
+
+iniciovars
+	literal lit;
+fimvars
+
+lit = "{comentario_nao_e_literal}"
+
+se (letra >< chute) entao
+	escreva "operador_nao_deveria_ser_identificado";
+fimse
+
+fimprog

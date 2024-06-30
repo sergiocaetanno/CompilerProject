@@ -1,0 +1,33 @@
+inicioprog
+
+inicioargs
+	literal letra;
+	inteiro cont;
+fimargs
+
+iniciovars
+	literal chute;	{ Caractere escolhido previamente. }
+	inteiro zero;
+fimvars
+
+chute = "k;
+chute = "k"";
+zero = 0;
+
+{ Comentario sem fim...
+se (letra == chute) entao
+	escreva "Acertei!\n";
+fimse
+
+{ Verificando e informando sobre contador < 0 }
+se (cont < zero) entao
+	escreva "cont < 0\n";
+fimse
+
+Comentario sem inicio...}
+enquanto (cont > 0) faca
+	escreva letra;
+	escreva "\n";
+fimenquanto
+
+fimprog

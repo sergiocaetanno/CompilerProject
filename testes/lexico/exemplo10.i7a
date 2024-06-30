@@ -1,0 +1,16 @@
+inicioprog
+
+inicioargs
+	inteiro num;
+fimargs
+
+iniciovars
+	inteiro i;
+fimvars
+
+num = 66.6E-10; i = -55.5E+5;
+
+escreva num + i;
+escreva "num + i";
+
+fimprog

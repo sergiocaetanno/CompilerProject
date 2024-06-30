@@ -1,0 +1,17 @@
+inicioprog
+
+inicioargs
+	inteiro num;
+fimargs
+
+iniciovars
+	inteiro _num_;
+fimvars
+
+num = -5.3E+3.9
+
+se (num == num) entao
+	escreva (num + num) - num/num;
+fimse
+
+fimprog

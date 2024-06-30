@@ -1,0 +1,17 @@
+inicioprog
+
+inicioargs
+	literal lit;
+fimargs
+
+iniciovars
+	literal lit;
+fimvars
+
+lit = "123.4E10+123"
+
+escreva = lit
+
+lit escreva
+
+fimprog

@@ -530,9 +530,6 @@ char *yytext;
     #include <string.h>
 #line 532 "lex.yy.c"
 #line 11 "analisadorLexico.l"
-    // Definição de ponteiro para arquivo de entrada
-    FILE *arquivo_entrada;
-
     // Definição de uma estrutura para um símbolo
     typedef struct Simbolo {
         char *lexema;
@@ -639,8 +636,8 @@ char *yytext;
 		fclose(arquivo);
 	}
 
-#line 643 "lex.yy.c"
-#line 644 "lex.yy.c"
+#line 640 "lex.yy.c"
+#line 641 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -857,10 +854,10 @@ YY_DECL
 		}
 
 	{
-#line 130 "analisadorLexico.l"
+#line 127 "analisadorLexico.l"
 
 
-#line 864 "lex.yy.c"
+#line 861 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -919,7 +916,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 132 "analisadorLexico.l"
+#line 129 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "INICIOPROG";
@@ -930,7 +927,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 140 "analisadorLexico.l"
+#line 137 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "FIMPROG";
@@ -941,7 +938,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 148 "analisadorLexico.l"
+#line 145 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "INICIOARGS";
@@ -952,7 +949,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 156 "analisadorLexico.l"
+#line 153 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "FIMARGS";
@@ -963,7 +960,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 164 "analisadorLexico.l"
+#line 161 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "INICIOVARS";
@@ -974,7 +971,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 172 "analisadorLexico.l"
+#line 169 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "FIMVARS";
@@ -985,7 +982,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 180 "analisadorLexico.l"
+#line 177 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "ESCREVA";
@@ -996,7 +993,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 188 "analisadorLexico.l"
+#line 185 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "INTEIRO";
@@ -1007,7 +1004,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 196 "analisadorLexico.l"
+#line 193 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "REAL";
@@ -1018,7 +1015,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 204 "analisadorLexico.l"
+#line 201 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "LITERAL";
@@ -1029,7 +1026,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 212 "analisadorLexico.l"
+#line 209 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "SE";
@@ -1040,7 +1037,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 220 "analisadorLexico.l"
+#line 217 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "ENTAO";
@@ -1051,7 +1048,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 228 "analisadorLexico.l"
+#line 225 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "FIMSE";
@@ -1062,7 +1059,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 236 "analisadorLexico.l"
+#line 233 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "ENQUANTO";
@@ -1073,7 +1070,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 244 "analisadorLexico.l"
+#line 241 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "FACA";
@@ -1084,7 +1081,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 252 "analisadorLexico.l"
+#line 249 "analisadorLexico.l"
 {
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
     tabela_lexema[num_simbolos].token = "FIMENQUANTO";
@@ -1095,7 +1092,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 260 "analisadorLexico.l"
+#line 257 "analisadorLexico.l"
 {
     // Armazenar o número na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1109,7 +1106,7 @@ YY_RULE_SETUP
 case 18:
 /* rule 18 can match eol */
 YY_RULE_SETUP
-#line 270 "analisadorLexico.l"
+#line 267 "analisadorLexico.l"
 {
     // Armazenar o literal na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1120,7 +1117,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 278 "analisadorLexico.l"
+#line 275 "analisadorLexico.l"
 {
     // Armazenar o identificador na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1132,7 +1129,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 287 "analisadorLexico.l"
+#line 284 "analisadorLexico.l"
 {
     // Armazenar o operador relacional na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1143,7 +1140,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 295 "analisadorLexico.l"
+#line 292 "analisadorLexico.l"
 {
     // Armazenar o operador aritmético na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1154,7 +1151,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 303 "analisadorLexico.l"
+#line 300 "analisadorLexico.l"
 {
     // Armazenar o operador de atribuição na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1165,7 +1162,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 311 "analisadorLexico.l"
+#line 308 "analisadorLexico.l"
 {
     // Armazenar o abre parêntese na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1176,7 +1173,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 319 "analisadorLexico.l"
+#line 316 "analisadorLexico.l"
 {
     // Armazenar o fecha parêntese na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1187,7 +1184,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 327 "analisadorLexico.l"
+#line 324 "analisadorLexico.l"
 {
     // Armazenar a vírgula na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1198,7 +1195,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 335 "analisadorLexico.l"
+#line 332 "analisadorLexico.l"
 {
     // Armazenar o ponto e vírgula na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1210,7 +1207,7 @@ YY_RULE_SETUP
 case 27:
 /* rule 27 can match eol */
 YY_RULE_SETUP
-#line 343 "analisadorLexico.l"
+#line 340 "analisadorLexico.l"
 {
     // Armazenar o ponto e vírgula na tabela de símbolos
     //tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1222,7 +1219,7 @@ YY_RULE_SETUP
 case 28:
 /* rule 28 can match eol */
 YY_RULE_SETUP
-#line 351 "analisadorLexico.l"
+#line 348 "analisadorLexico.l"
 {
     // Armazenar o ponto e vírgula na tabela de símbolos
     tabela_lexema[num_simbolos].lexema = strdup(yytext);
@@ -1232,7 +1229,7 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 359 "analisadorLexico.l"
+#line 356 "analisadorLexico.l"
 {
     printf("FIM_DE_ARQ\n");
     // Exportar a tabela de símbolos para um arquivo
@@ -1243,7 +1240,7 @@ case YY_STATE_EOF(INITIAL):
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 367 "analisadorLexico.l"
+#line 364 "analisadorLexico.l"
 {
     printf("ERRO: EXPRESSÃO INVÁLIDA\n");
 	exit(0);
@@ -1251,10 +1248,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 372 "analisadorLexico.l"
+#line 369 "analisadorLexico.l"
 ECHO;
 	YY_BREAK
-#line 1258 "lex.yy.c"
+#line 1255 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -2257,19 +2254,25 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 372 "analisadorLexico.l"
+#line 369 "analisadorLexico.l"
 
 
-int main() {
+int main(int argc, char *argv[]) {
+  FILE *arquivo_entrada;
 
+  // Verificar se o arquivo de entrada foi passado como argumento
+  if (argc < 2) {
+    printf("Uso: %s <arquivo_entrada>\n", argv[0]);
+    return 1;
+  }
 
   // Abrir o arquivo de entrada
-  arquivo_entrada = fopen("arquivo_entrada", "r");
+  arquivo_entrada = fopen(argv[1], "r");
 
   // Verificar se o arquivo foi aberto com sucesso
   if (arquivo_entrada == NULL) {
     printf("Erro ao abrir o arquivo de entrada.\n");
-    exit(1);
+    return 1;
   }
 
   // Redirecionar a entrada padrão para o arquivo
@@ -2277,13 +2280,13 @@ int main() {
 
   // Chamar yylex() para iniciar a análise léxica
   yylex();
-  
+
   // Fechar o arquivo de entrada
   fclose(arquivo_entrada);
 
   // Após a conclusão da análise léxica, exporte a tabela de símbolos
-  //exportar_tabela("tabela_lexema.csv");
+  // exportar_tabela("tabela_lexema.csv");
 
-    return 0;
+  return 0;
 }
 

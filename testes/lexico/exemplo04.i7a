@@ -1,0 +1,29 @@
+inicioprog
+
+iniciovars
+	inteiro potencia;
+	real valor, resultado;
+fimvars
+
+potencia = 3;
+valor = 5.0;
+resultado = 1.0;
+
+se (potencia == 0) entao
+	valor = 1.0
+fims
+
+se (potencia < zero) entao
+	valor = 1 / valor;
+fims
+
+enquanta (potencia > 0) faca
+	resultado = resultado * valor;
+	potencia = potencia - 1;
+fimenquanto
+
+escreva "Resultado: ";
+escreva resultado;
+escreve "\n";
+
+fimprog

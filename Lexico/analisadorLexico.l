@@ -8,9 +8,6 @@
 %option noyywrap
 
 %{		
-    // Definição de ponteiro para arquivo de entrada
-    FILE *arquivo_entrada;
-
     // Definição de uma estrutura para um símbolo
     typedef struct Simbolo {
         char *lexema;
@@ -371,16 +368,22 @@ fimenquanto {
 
 %%
 
-int main() {
+int main(int argc, char *argv[]) {
+  FILE *arquivo_entrada;
 
+  // Verificar se o arquivo de entrada foi passado como argumento
+  if (argc < 2) {
+    printf("Uso: %s <arquivo_entrada>\n", argv[0]);
+    return 1;
+  }
 
   // Abrir o arquivo de entrada
-  arquivo_entrada = fopen("arquivo_entrada", "r");
+  arquivo_entrada = fopen(argv[1], "r");
 
   // Verificar se o arquivo foi aberto com sucesso
   if (arquivo_entrada == NULL) {
     printf("Erro ao abrir o arquivo de entrada.\n");
-    exit(1);
+    return 1;
   }
 
   // Redirecionar a entrada padrão para o arquivo
@@ -388,12 +391,12 @@ int main() {
 
   // Chamar yylex() para iniciar a análise léxica
   yylex();
-  
+
   // Fechar o arquivo de entrada
   fclose(arquivo_entrada);
 
   // Após a conclusão da análise léxica, exporte a tabela de símbolos
-  //exportar_tabela("tabela_lexema.csv");
+  // exportar_tabela("tabela_lexema.csv");
 
-    return 0;
+  return 0;
 }
