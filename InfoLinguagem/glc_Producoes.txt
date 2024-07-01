@@ -1,0 +1,78 @@
+programa:
+    INICIOPROG bloco_programa FIMPROG
+    ;
+
+bloco_programa:
+    bloco_args bloco_vars bloco_comandos
+    ;
+
+bloco_args:
+    INICIOARGS lista_declaracoes FIMARGS 
+    | /* vazio */ 
+    ;
+
+bloco_vars:
+    INICIOVARS lista_declaracoes FIMVARS 
+    | /* vazio */ 
+    ;
+
+lista_declaracoes:
+    lista_declaracoes declaracao PONTO_E_VIRG 
+    | declaracao PONTO_E_VIRG 
+    ;
+
+declaracao:
+    tipo lista_identificadores 
+    ;
+
+tipo:
+    INTEIRO
+    | REAL 
+    | LITERAL 
+    ;
+
+lista_identificadores:
+    lista_identificadores VIRGULA IDENTIFICADOR 
+    | IDENTIFICADOR 
+    ;
+
+bloco_comandos:
+    lista_comandos 
+    ;
+
+lista_comandos:
+    lista_comandos comando 
+    | comando 
+    ;
+
+comando:
+    atribuicao PONTO_E_VIRG 
+    | comando_se 
+    | comando_enquanto 
+    | comando_escreva 
+    ;
+
+atribuicao:
+    IDENTIFICADOR ATRIBUICAO expressao
+    ;
+
+comando_se:
+    SE ABRE_PAR expressao FECHA_PAR ENTAO lista_comandos FIMSE 
+    ;
+
+comando_enquanto:
+    ENQUANTO ABRE_PAR expressao FECHA_PAR FACA lista_comandos FIMENQUANTO 
+    ;
+
+comando_escreva:
+    ESCREVA expressao PONTO_E_VIRG 
+    ;
+
+expressao:
+    expressao OP_ARITMETICO expressao 
+    | expressao OP_RELACIONAL expressao 
+    | IDENTIFICADOR 
+    | NUMERO 
+    | LITERAL_CONST 
+    | ABRE_PAR expressao FECHA_PAR 
+    ;
